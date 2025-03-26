@@ -9,7 +9,7 @@ public abstract class Vehicle implements Llogable {
     protected Roda[] Rodes;
     protected String EtiquetaAmbiental;
     protected boolean disponibilidad = true;
-    protected int año;  // Nuevo atributo para el año
+    protected int año;
 
     public Vehicle(String Matr, String Marca, String Model, double preu, Motor Motor, Roda[] Rodes, int año) {
         this.matricula = Matr;
@@ -19,7 +19,15 @@ public abstract class Vehicle implements Llogable {
         this.Motor = Motor;
         this.Rodes = Rodes;
         this.año = año;
-        this.EtiquetaAmbiental = calcularEtiquetaAmbiental(tipusVehicle.valueOf(Motor.getTipus().toUpperCase()), año);// Calcula etiqueta automáticamente
+        this.EtiquetaAmbiental = calcularEtiquetaAmbiental(tipusVehicle.valueOf(Motor.getTipus().toUpperCase()), año);
+    }
+
+    public void setDisponibilidad(boolean disponibilidad) {
+        this.disponibilidad = disponibilidad;
+    }
+
+    public boolean isDisponible() {
+        return disponibilidad;
     }
 
     public int getAño() {
@@ -61,14 +69,15 @@ public abstract class Vehicle implements Llogable {
                 return "Etiqueta 0 Emisiones";
             case HIBRID_DIESEL:
             case HIBRID_GASOLINA:
-                return (año >= 2015) ? "Etiqueta ECO" : "Etiqueta B";
+                return "Etiqueta ECO";
             case DIESEL:
-                return (año >= 2006) ? "Etiqueta C" : "Etiqueta B";
+                return (año >= 2015) ? "Etiqueta C" : (año >= 2006) ? "Etiqueta B" : "Sin etiqueta";
             case GASOLINA:
                 return (año >= 2006) ? "Etiqueta C" : (año >= 2000) ? "Etiqueta B" : "Sin etiqueta";
             default:
                 return "Sin etiqueta";
         }
+
     }
 
     public String printVehicle() {

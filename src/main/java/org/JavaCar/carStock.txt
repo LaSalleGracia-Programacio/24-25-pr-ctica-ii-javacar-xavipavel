@@ -39,7 +39,7 @@ Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
 Roda(Diametre): 17.0
-Nº Plaçes:0
+Nº Plaçes:5
 
 Vehicle: Moto
 Matricula: 5678DEF
@@ -52,7 +52,7 @@ Roda(marca): Pirelli
 Roda(Diametre): 16.0
 Roda(marca): Pirelli
 Roda(Diametre): 16.0
-Cilindrada:0
+Cilindrada:125
 
 Vehicle: Furgoneta
 Matricula: 3344MNA
@@ -86,7 +86,7 @@ Roda(marca): si
 Roda(Diametre): 4.0
 Roda(marca): si
 Roda(Diametre): 4.0
-Nº Plaçes:0
+Nº Plaçes:5
 
 Vehicle: Moto
 Matricula: no

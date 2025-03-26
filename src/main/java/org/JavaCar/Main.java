@@ -122,8 +122,6 @@ public class Main {
 
 
         }
-
-
     }
 
     public static void ADM_logged_Menu(){
