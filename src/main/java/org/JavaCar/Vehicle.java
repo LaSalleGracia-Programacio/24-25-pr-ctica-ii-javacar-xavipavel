@@ -20,16 +20,6 @@ public abstract class Vehicle implements Llogable {
         this.Motor = motor;
         this.Rodes = rodes;
         this.año = año;
-
-        // Calcular la etiqueta ambiental al instanciar el objeto
-        // Utiliza el tipo de motor y el año para determinar la etiqueta ambiental
-        try {
-            this.EtiquetaAmbiental = calcularEtiquetaAmbiental(tipusVehicle.valueOf(motor.getTipus().toUpperCase()), año);
-        } catch (IllegalArgumentException e) {
-            // Si el tipo de motor no es válido, se captura la excepción y se asigna "Sin etiqueta"
-            this.EtiquetaAmbiental = "Sin etiqueta";
-            System.out.println("Error al calcular la etiqueta ambiental: tipo de motor no válido.");
-        }
     }
 
     // Setter para la disponibilidad
