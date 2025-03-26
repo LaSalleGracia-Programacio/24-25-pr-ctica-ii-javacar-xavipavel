@@ -15,7 +15,7 @@ public class Moto extends Vehicle implements Llogable {
     @Override
     public double calcularPreu(int dies) {
         if (cilindrada >= 500) {
-            return (getPreuBase() + 5) * dies;
+            return (getPreuBase() + 5.0) * dies;  // Aseguramos que el 5 sea un valor double
         } else {
             return getPreuBase() * dies;
         }
