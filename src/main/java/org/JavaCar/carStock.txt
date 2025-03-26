@@ -5,6 +5,8 @@ Model: Daily
 PreuBase: 55
 Tipus(Motor): GASOLINA
 Potencia(Motor): 120
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
@@ -18,6 +20,8 @@ Model: Vito
 PreuBase: 50
 Tipus(Motor): GASOLINA
 Potencia(Motor): 120
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
@@ -31,6 +35,8 @@ Model: Corolla
 PreuBase: 30
 Tipus(Motor): GASOLINA
 Potencia(Motor): 120
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
@@ -39,7 +45,7 @@ Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
 Roda(Diametre): 17.0
-Nº Plaçes:5
+Nº Plaçes:0
 
 Vehicle: Moto
 Matricula: 5678DEF
@@ -48,11 +54,13 @@ Model: R6
 PreuBase: 25
 Tipus(Motor): GASOLINA
 Potencia(Motor): 80
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): Pirelli
 Roda(Diametre): 16.0
 Roda(marca): Pirelli
 Roda(Diametre): 16.0
-Cilindrada:125
+Cilindrada:0
 
 Vehicle: Furgoneta
 Matricula: 3344MNA
@@ -61,6 +69,8 @@ Model: Fake
 PreuBase: 1500
 Tipus(Motor): Gasolina
 Potencia(Motor): 500
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin 17
@@ -78,6 +88,8 @@ Model: si
 PreuBase: 500
 Tipus(Motor): Gasolina
 Potencia(Motor): 500
+Año: 0
+Etiqueta Ambiental: Sin etiqueta
 Roda(marca): si
 Roda(Diametre): 4.0
 Roda(marca): si
@@ -86,17 +98,24 @@ Roda(marca): si
 Roda(Diametre): 4.0
 Roda(marca): si
 Roda(Diametre): 4.0
+Nº Plaçes:0
+
+Vehicle: Cotxe
+Matricula: 9988PAM
+Marca: Ford
+Model: Kuga
+PreuBase: 15000
+Tipus(Motor): Gasolina
+Potencia(Motor): 999
+Año: 2020
+Etiqueta Ambiental: Etiqueta C
+Roda(marca): Michelin
+Roda(Diametre): 2.0
+Roda(marca): Michelin
+Roda(Diametre): 2.0
+Roda(marca): Michelin
+Roda(Diametre): 2.0
+Roda(marca): Michelin
+Roda(Diametre): 2.0
 Nº Plaçes:5
 
-Vehicle: Moto
-Matricula: no
-Marca: no
-Model: no
-PreuBase: 500
-Tipus(Motor): Diesel
-Potencia(Motor): 500
-Roda(marca): no
-Roda(Diametre): 4.0
-Roda(marca): no
-Roda(Diametre): 4.0
-Cilindrada:500
