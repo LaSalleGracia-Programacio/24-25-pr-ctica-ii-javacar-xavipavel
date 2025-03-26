@@ -29,78 +29,6 @@ Roda(Diametre): 17.0
 Capacitat MAX:0
 
 Vehicle: Cotxe
-Matricula: 1234ABC
-Marca: Toyota
-Model: Corolla
-PreuBase: 30
-Tipus(Motor): GASOLINA
-Potencia(Motor): 120
-Año: 0
-Etiqueta Ambiental: Sin etiqueta
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Nº Plaçes:0
-
-Vehicle: Moto
-Matricula: 5678DEF
-Marca: Yamaha
-Model: R6
-PreuBase: 25
-Tipus(Motor): GASOLINA
-Potencia(Motor): 80
-Año: 0
-Etiqueta Ambiental: Sin etiqueta
-Roda(marca): Pirelli
-Roda(Diametre): 16.0
-Roda(marca): Pirelli
-Roda(Diametre): 16.0
-Cilindrada:0
-
-Vehicle: Furgoneta
-Matricula: 3344MNA
-Marca: Mircedes
-Model: Fake
-PreuBase: 1500
-Tipus(Motor): Gasolina
-Potencia(Motor): 500
-Año: 0
-Etiqueta Ambiental: Sin etiqueta
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Roda(marca): Michelin 17
-Roda(Diametre): 17.0
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Roda(marca): Michelin
-Roda(Diametre): 17.0
-Capacitat MAX:0
-
-Vehicle: Cotxe
-Matricula: si
-Marca: si
-Model: si
-PreuBase: 500
-Tipus(Motor): Gasolina
-Potencia(Motor): 500
-Año: 0
-Etiqueta Ambiental: Sin etiqueta
-Roda(marca): si
-Roda(Diametre): 4.0
-Roda(marca): si
-Roda(Diametre): 4.0
-Roda(marca): si
-Roda(Diametre): 4.0
-Roda(marca): si
-Roda(Diametre): 4.0
-Nº Plaçes:0
-
-Vehicle: Cotxe
 Matricula: 9988PAM
 Marca: Ford
 Model: Kuga
@@ -119,3 +47,97 @@ Roda(marca): Michelin
 Roda(Diametre): 2.0
 Nº Plaçes:5
 
+Vehicle: Cotxe
+Matricula: 2233JKL
+Marca: Volkswagen
+Model: Golf
+PreuBase: 20000
+Tipus(Motor): GASOLINA
+Potencia(Motor): 150
+Año: 2023
+Etiqueta Ambiental: Etiqueta C
+Roda(marca): Michelin
+Roda(Diametre): 1.9
+Roda(marca): Michelin
+Roda(Diametre): 1.9
+Roda(marca): Michelin
+Roda(Diametre): 1.9
+Roda(marca): Michelin
+Roda(Diametre): 1.9
+Nº Plaçes: 5
+
+Vehicle: Cotxe
+Matricula: 4455MNO
+Marca: Nissan
+Model: Leaf
+PreuBase: 28000
+Tipus(Motor): ELECTRIC
+Potencia(Motor): 150
+Año: 2021
+Etiqueta Ambiental: Etiqueta 0
+Roda(marca): Bridgestone
+Roda(Diametre): 2.0
+Roda(marca): Bridgestone
+Roda(Diametre): 2.0
+Roda(marca): Bridgestone
+Roda(Diametre): 2.0
+Roda(marca): Bridgestone
+Roda(Diametre): 2.0
+Nº Plaçes: 5
+
+Vehicle: Cotxe
+Matricula: 6677PQR
+Marca: Toyota
+Model: Prius
+PreuBase: 30000
+Tipus(Motor): HIBRID_GASOLINA
+Potencia(Motor): 122
+Año: 2022
+Etiqueta Ambiental: Etiqueta 0
+Roda(marca): Continental
+Roda(Diametre): 2.1
+Roda(marca): Continental
+Roda(Diametre): 2.1
+Roda(marca): Continental
+Roda(Diametre): 2.1
+Roda(marca): Continental
+Roda(Diametre): 2.1
+Nº Plaçes: 5
+
+Vehicle: Cotxe
+Matricula: 8899STU
+Marca: Ford
+Model: Mondeo
+PreuBase: 25000
+Tipus(Motor): HIBRID_DIESEL
+Potencia(Motor): 180
+Año: 2020
+Etiqueta Ambiental: Etiqueta C
+Roda(marca): Pirelli
+Roda(Diametre): 2.2
+Roda(marca): Pirelli
+Roda(Diametre): 2.2
+Roda(marca): Pirelli
+Roda(Diametre): 2.2
+Roda(marca): Pirelli
+Roda(Diametre): 2.2
+Nº Plaçes: 5
+
+Vehicle: Cotxe
+Matricula: 1122VWX
+Marca: Renault
+Model: Koleos
+PreuBase: 35000
+Tipus(Motor): DIESEL
+Potencia(Motor): 175
+Año: 2019
+Etiqueta Ambiental: Etiqueta B
+Roda(marca): Goodyear
+Roda(Diametre): 2.3
+Roda(marca): Goodyear
+Roda(Diametre): 2.3
+Roda(marca): Goodyear
+Roda(Diametre): 2.3
+Roda(marca): Goodyear
+Roda(Diametre): 2.3
+Nº Plaçes: 5
