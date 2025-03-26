@@ -99,7 +99,7 @@ public class DataHandlers {
             String rodaMarca = "";
             double rodaDiametre = 0;
             int capacitatCarga = 0, nombrePlaces = 0, cilindrada = 0;
-            int anyo = 0;
+            int anyo = 0;  // Año agregado
             List<Roda> rodes = new ArrayList<>();
 
             while ((line = br.readLine()) != null) {
@@ -128,8 +128,10 @@ public class DataHandlers {
                     matricula = ""; marca = ""; model = ""; preuBase = 0;
                     tipusMotor = ""; potenciaMotor = 0; rodes.clear();
                     capacitatCarga = 0; nombrePlaces = 0; cilindrada = 0;
+                    anyo = 0;  // Reiniciar el año también
                 }
 
+                // Asignación de campos
                 switch (parts[0].trim()) {
                     case "Vehicle":
                         type = parts[1].trim();
@@ -168,6 +170,9 @@ public class DataHandlers {
                     case "Cilindrada":
                         cilindrada = Integer.parseInt(parts[1].trim());
                         break;
+                    case "Año":  // Nuevo caso para el año
+                        anyo = Integer.parseInt(parts[1].trim());
+                        break;
                 }
             }
         } catch (IOException e) {
@@ -176,6 +181,7 @@ public class DataHandlers {
 
         return vehicles;
     }
+
 
     /**
      * Registra un nuevo usuario solicitando el nombre de usuario y contraseña por consola.

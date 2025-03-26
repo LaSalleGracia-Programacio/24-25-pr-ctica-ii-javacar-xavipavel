@@ -7,7 +7,7 @@ public abstract class Vehicle implements Llogable {
     protected double PreuBase;
     protected Motor Motor;
     protected Roda[] Rodes;
-    protected String EtiquetaAmbiental;
+    protected EtiquetaAmbiental EtiquetaAmbiental;  // Cambiado a Enum
     protected boolean disponibilidad = true;
     protected int año;
 
@@ -73,21 +73,26 @@ public abstract class Vehicle implements Llogable {
     }
 
     // Método para calcular la etiqueta ambiental según el tipo de motor y el año
-    public String calcularEtiquetaAmbiental(tipusVehicle tipus, int año) {
+    public void calcularEtiquetaAmbiental(tipusVehicle tipus, int año) {
+        // Verifica que el tipo y año sean correctos
+        System.out.println("Calculando etiqueta para: " + tipus + ", Año: " + año);
+
         switch (tipus) {
             case ELECTRIC:
-                return "Etiqueta 0 Emisiones";
+                this.EtiquetaAmbiental = EtiquetaAmbiental.ETIQUETA_0_EMISIONES;
+                break;
             case HIBRID_DIESEL:
             case HIBRID_GASOLINA:
-                return "Etiqueta ECO";
+                this.EtiquetaAmbiental = EtiquetaAmbiental.ETIQUETA_ECO;
+                break;
             case DIESEL:
-                // Etiqueta C para diésel de 2015 en adelante, B de 2006 a 2014, o "Sin etiqueta"
-                return (año >= 2015) ? "Etiqueta C" : (año >= 2006) ? "Etiqueta B" : "Sin etiqueta";
+                this.EtiquetaAmbiental = (año >= 2015) ? EtiquetaAmbiental.ETIQUETA_C : (año >= 2006) ? EtiquetaAmbiental.ETIQUETA_B : null;
+                break;
             case GASOLINA:
-                // Etiqueta C para gasolina de 2006 en adelante, B de 2000 a 2005, o "Sin etiqueta"
-                return (año >= 2006) ? "Etiqueta C" : (año >= 2000) ? "Etiqueta B" : "Sin etiqueta";
+                this.EtiquetaAmbiental = (año >= 2006) ? EtiquetaAmbiental.ETIQUETA_C : (año >= 2000) ? EtiquetaAmbiental.ETIQUETA_B : null;
+                break;
             default:
-                return "Sin etiqueta";
+                this.EtiquetaAmbiental = null;
         }
     }
 
@@ -100,7 +105,7 @@ public abstract class Vehicle implements Llogable {
                 "Tipus(Motor): " + Motor.getTipus() + "\n" +
                 "Potencia(Motor): " + Motor.getPotencia() + "\n" +
                 "Año: " + getAño() + "\n" +
-                "Etiqueta Ambiental: " + EtiquetaAmbiental + "\n";
+                "Etiqueta Ambiental: " + (EtiquetaAmbiental != null ? EtiquetaAmbiental.getNombre() : "Sin etiqueta") + "\n";
 
         // Añadir información sobre las ruedas
         for (Roda i : Rodes) {
