@@ -473,36 +473,56 @@ public class DataHandlers {
             auxCotxe = (Cotxe)vehicle;
         }
 
-        if (option == 1){ //comprar
-            System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
-            vehicle.printVehicle();
-            if (auxFurgo == null){
-                System.out.println("Capacitat MAX: "+auxFurgo.getCapacitatCarga());
-            }else if (auxMoto != null){
-                System.out.println("Cilindrada: "+auxMoto.getCilindrada());
-            }else if (auxCotxe != null){
-                System.out.println("Nº Plaçes: "+auxCotxe.getNombrePlaces());
+        public void compra(int option, Vehicle vehicle) {
+            Furgoneta auxFurgo = null;
+            Moto auxMoto = null;
+            Cotxe auxCotxe = null;
+            int dies = 0;
+
+            if (vehicle instanceof Furgoneta) {
+                auxFurgo = (Furgoneta) vehicle;
+            } else if (vehicle instanceof Moto) {
+                auxMoto = (Moto) vehicle;
+            } else if (vehicle instanceof Cotxe) {
+                auxCotxe = (Cotxe) vehicle;
             }
-            System.out.println("\n\n\n QUANTITAT A PAGAR:"+ vehicle.getPreuBase());
-        }else { // llogar
-            try{
-                System.out.println("Per cuants dies vols llogar el vehicle?");
-                dies = input.nextInt();
-            }catch (InputMismatchException e){
-                System.out.println("No es un numero");
-            }
-            System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
-            vehicle.printVehicle();
-            if (auxFurgo != null){
-                System.out.println("Capacitat MAX: "+auxFurgo.getCapacitatCarga());
-                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxFurgo.calcularPreu(dies));
-            }else if (auxMoto != null){
-                System.out.println("Cilindrada: "+auxMoto.getCilindrada());
-                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxMoto.calcularPreu(dies));
-            }else{
-                System.out.println("Nº Plaçes: "+auxCotxe.getNombrePlaces());
-                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxCotxe.calcularPreu(dies));
+
+            if (option == 1) { // comprar
+                System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
+                vehicle.printVehicle();
+                if (auxFurgo == null) {
+                    System.out.println("Capacitat MAX: " + auxFurgo.getCapacitatCarga());
+                } else if (auxMoto != null) {
+                    System.out.println("Cilindrada: " + auxMoto.getCilindrada());
+                } else if (auxCotxe != null) {
+                    System.out.println("Nº Plaçes: " + auxCotxe.getNombrePlaces());
+                }
+                System.out.println("\n\n\n QUANTITAT A PAGAR: " + vehicle.getPreuBase());
+
+                vehicle.setDisponibilidad(false);
+                System.out.println("La disponibilidad del vehículo ahora es: " + vehicle.isDisponible());
+
+            } else { // llogar
+                try {
+                    System.out.println("Per cuants dies vols llogar el vehicle?");
+                    dies = input.nextInt();
+                } catch (InputMismatchException e) {
+                    System.out.println("No es un numero");
+                }
+                System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
+                vehicle.printVehicle();
+                if (auxFurgo != null) {
+                    System.out.println("Capacitat MAX: " + auxFurgo.getCapacitatCarga());
+                    System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxFurgo.calcularPreu(dies));
+                } else if (auxMoto != null) {
+                    System.out.println("Cilindrada: " + auxMoto.getCilindrada());
+                    System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxMoto.calcularPreu(dies));
+                } else {
+                    System.out.println("Nº Plaçes: " + auxCotxe.getNombrePlaces());
+                    System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxCotxe.calcularPreu(dies));
+                }
             }
         }
+
     }
 }
