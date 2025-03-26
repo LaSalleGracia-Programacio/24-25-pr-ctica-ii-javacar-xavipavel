@@ -15,7 +15,7 @@ public class Furgoneta extends Vehicle implements Llogable {
     @Override
     public double calcularPreu(int dies) {
         if (capacitatCarga >= 1000) {
-            return (getPreuBase() + 10.0) * dies;  // Aseguramos que el 10 sea un valor double
+            return (getPreuBase() + 10.0) * dies;
         } else {
             return getPreuBase() * dies;
         }
