@@ -99,6 +99,7 @@ public class DataHandlers {
             String rodaMarca = "";
             double rodaDiametre = 0;
             int capacitatCarga = 0, nombrePlaces = 0, cilindrada = 0;
+            int anyo = 0;
             List<Roda> rodes = new ArrayList<>();
 
             while ((line = br.readLine()) != null) {
@@ -109,13 +110,13 @@ public class DataHandlers {
 
                     switch (type) {
                         case "Furgoneta":
-                            vehicle = new Furgoneta(matricula, marca, model, preuBase, capacitatCarga, motor, rodes.toArray(new Roda[0]));
+                            vehicle = new Furgoneta(matricula, marca, model, preuBase, capacitatCarga, motor, rodes.toArray(new Roda[0]), anyo);
                             break;
                         case "Cotxe":
-                            vehicle = new Cotxe(matricula, marca, model, preuBase, nombrePlaces, motor, rodes.toArray(new Roda[0]));
+                            vehicle = new Cotxe(matricula, marca, model, preuBase, nombrePlaces, motor, rodes.toArray(new Roda[0]), anyo);
                             break;
                         case "Moto":
-                            vehicle = new Moto(matricula, marca, model, preuBase, cilindrada, motor, rodes.toArray(new Roda[0]));
+                            vehicle = new Moto(matricula, marca, model, preuBase, cilindrada, motor, rodes.toArray(new Roda[0]), anyo);
                             break;
                     }
 
@@ -276,25 +277,37 @@ public class DataHandlers {
         System.out.print("Introduce la matrícula: ");
         String matr = input.nextLine();
         input.reset();
+
         System.out.print("Introduce la marca: ");
         String marca = input.nextLine();
         input.reset();
+
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
         input.reset();
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt();
+        input.nextLine(); // Consumir nueva línea
+        input.reset();
+
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
         input.reset();
+
         System.out.print("Introduce la capacidad de carga: ");
         int carga = input.nextInt();
         input.nextLine(); // Consumir nueva línea
         input.reset();
+
         System.out.print("Introduce el tipo de motor: ");
         String tipusMotor = input.nextLine();
         input.reset();
+
         System.out.print("Introduce la potencia del motor: ");
         int potenciaMotor = input.nextInt();
         input.nextLine(); // Consumir nueva línea
+
         Motor motor = new Motor(tipusMotor, potenciaMotor);
 
         Roda[] rodes = new Roda[4];
@@ -309,7 +322,7 @@ public class DataHandlers {
             rodes[i] = new Roda(marcaRoda, diametreRoda);
         }
 
-        return new Furgoneta(matr, marca, model, preu, carga, motor, rodes);
+        return new Furgoneta(matr, marca, model, preu, carga, motor, rodes, anyo);
     }
 
     /**
@@ -329,6 +342,11 @@ public class DataHandlers {
 
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt();
+        input.nextLine(); // Consumir nueva línea
+        input.reset();
 
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
@@ -357,7 +375,7 @@ public class DataHandlers {
             rodes[i] = new Roda(marcaRoda, diametreRoda);
         }
 
-        return new Cotxe(matr, marca, model, preu, places, motor, rodes);
+        return new Cotxe(matr, marca, model, preu, places, motor, rodes, anyo);
     }
 
     /**
@@ -379,6 +397,11 @@ public class DataHandlers {
 
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt();
+        input.nextLine(); // Consumir nueva línea
+        input.reset();
 
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
@@ -407,7 +430,7 @@ public class DataHandlers {
             rodes[i] = new Roda(marcaRoda, diametreRoda);
         }
 
-        return new Moto(matr, marca, model, preu, cilindrada, motor, rodes);
+        return new Moto(matr, marca, model, preu, cilindrada, motor, rodes, anyo);
     }
 
     public static void llistarInventari(List<Vehicle> inventari){

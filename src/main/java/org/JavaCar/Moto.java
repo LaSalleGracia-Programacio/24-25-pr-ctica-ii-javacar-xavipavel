@@ -2,8 +2,8 @@ package org.JavaCar;
 
 public class Moto extends Vehicle implements Llogable {
     private int cilindrada;
-    public Moto(String Matr, String Marca, String Model, double preu, int cilin, Motor Motor,Roda[] Rodes){
-        super(Matr,Marca,Model,preu,Motor,Rodes);
+    public Moto(String Matr, String Marca, String Model, double preu, int cilin, Motor Motor,Roda[] Rodes, int año){
+        super(Matr,Marca,Model,preu,Motor,Rodes,año);
         this.cilindrada = cilin;
     }
     public int getCilindrada(){
