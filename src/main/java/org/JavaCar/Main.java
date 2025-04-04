@@ -145,8 +145,6 @@ public class Main {
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
-
-
         }
     }
 
