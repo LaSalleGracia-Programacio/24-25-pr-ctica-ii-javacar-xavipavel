@@ -9,50 +9,100 @@ public abstract class Vehicle implements Llogable {
     protected Roda[] Rodes;
     protected String EtiquetaAmbiental;
     protected boolean disponibilidad = true;
-    int anyo;
-    
-    public Vehicle(String Matr, String Marca, String Model, double preu,Motor Motor,Roda[] Rodes,int anyo){
+    protected int anyo;
+
+    public Vehicle(String Matr, String Marca, String Model, double preu, Motor Motor, Roda[] Rodes, int anyo) {
         this.matricula = Matr;
         this.marca = Marca;
         this.model = Model;
         this.PreuBase = preu;
         this.Motor = Motor;
         this.Rodes = Rodes;
-        //this.EtiquetaAmbiental = etiqueta;
         this.anyo = anyo;
+        calcularEtiquetaAmbiental(); // Calcular etiqueta automáticamente al crear el vehículo
     }
 
-    public String getMatricula(){
+    public String getMatricula() {
         return matricula;
     }
-    public String getMarca(){
+
+    public String getMarca() {
         return marca;
     }
-    public String getModel(){
+
+    public String getModel() {
         return model;
     }
-    public int getPreuBase(){
+
+    public int getPreuBase() {
         return (int) PreuBase;
     }
-    public Motor getMotor(){
+
+    public Motor getMotor() {
         return Motor;
     }
-    public Roda[] getRodes(){
+
+    public Roda[] getRodes() {
         return Rodes;
     }
-    public double calcularPreu(int dies){
-        return this.PreuBase*dies;
+
+    public int getAnyo() {
+        return anyo;
     }
 
-    public String printVehicle(){
-        String form="Matricula: "+ getMatricula()+"\n" +
-                                   "Marca: "+getMarca()+"\n" +
-                                   "Model: "+getModel()+"\n" +
-                                   "PreuBase: "+getPreuBase()+"\n" +
-                                   "Tipus(Motor): "+Motor.getTipus()+"\n" +
-                                   "Potencia(Motor): "+Motor.getPotencia()+"\n";
-        for (Roda i : Rodes){
-            form+="Roda(marca): "+i.getMarca()+"\nRoda(Diametre): "+i.getDiametre()+"\n";
+    public String getEtiquetaAmbiental() {
+        return EtiquetaAmbiental;
+    }
+
+    public double calcularPreu(int dies) {
+        return this.PreuBase * dies;
+    }
+
+    /**
+     * Método que calcula la etiqueta ambiental basándose en el tipo de motor y el año.
+     */
+    protected void calcularEtiquetaAmbiental() {
+        String tipusMotor = Motor.getTipus().toLowerCase();
+
+        if (tipusMotor.contains("electric") || tipusMotor.contains("hidrogen")) {
+            EtiquetaAmbiental = "0";
+        } else if (tipusMotor.contains("híbrid") || tipusMotor.contains("hibrid") || tipusMotor.contains("hybrid")) {
+            EtiquetaAmbiental = "ECO";
+        } else if (tipusMotor.contains("gasolina")) {
+            if (anyo >= 2006) {
+                EtiquetaAmbiental = "C";
+            } else if (anyo >= 2001) {
+                EtiquetaAmbiental = "B";
+            } else {
+                EtiquetaAmbiental = "Sense etiqueta";
+            }
+        } else if (tipusMotor.contains("diesel") || tipusMotor.contains("dièsel")) {
+            if (anyo >= 2014) {
+                EtiquetaAmbiental = "C";
+            } else if (anyo >= 2006) {
+                EtiquetaAmbiental = "B";
+            } else {
+                EtiquetaAmbiental = "Sense etiqueta";
+            }
+        } else {
+            EtiquetaAmbiental = "Sense etiqueta";
+        }
+    }
+
+    /**
+     * Muestra los datos del vehículo.
+     */
+    public String printVehicle() {
+        String form = "Matricula: " + getMatricula() + "\n" +
+                "Marca: " + getMarca() + "\n" +
+                "Model: " + getModel() + "\n" +
+                "PreuBase: " + getPreuBase() + "\n" +
+                "Tipus(Motor): " + Motor.getTipus() + "\n" +
+                "Potencia(Motor): " + Motor.getPotencia() + "\n" +
+                "Any: " + getAnyo() + "\n" +
+                "Etiqueta Ambiental: " + getEtiquetaAmbiental() + "\n";
+        for (Roda i : Rodes) {
+            form += "Roda(marca): " + i.getMarca() + "\nRoda(Diametre): " + i.getDiametre() + "\n";
         }
         System.out.println(form);
         return form;
