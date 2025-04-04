@@ -469,7 +469,7 @@ public class DataHandlers {
         if (option == 1){ //comprar
             System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
             vehicle.printVehicle();
-            if (auxFurgo == null){
+            if (auxFurgo != null){
                 System.out.println("Capacitat MAX: "+auxFurgo.getCapacitatCarga());
             }else if (auxMoto != null){
                 System.out.println("Cilindrada: "+auxMoto.getCilindrada());
