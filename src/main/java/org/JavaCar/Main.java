@@ -80,8 +80,6 @@ public class Main {
                 System.out.println(e.toString());
             }
         }
-
-
     }
 
     public static void User_logged_Menu(){
@@ -111,7 +109,7 @@ public class Main {
                         dh.compra(2,si);
                         break;
                     case 3:
-                        Menu();
+                        program=false;
                         break;
                     default:
                         System.out.println("Invalid option");
@@ -119,11 +117,7 @@ public class Main {
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
-
-
         }
-
-
     }
 
     public static void ADM_logged_Menu(){
@@ -142,7 +136,8 @@ public class Main {
                     case 2:
                         break;
                     case 3:
-                        Menu();
+                        //Menu();
+                        program = false;
                         break;
                     default:
                         System.out.println("Invalid option");
@@ -179,16 +174,14 @@ public class Main {
                         dh.saveStock(inventory);
                         break;
                     case 4:
-
-                        ADM_logged_Menu();
+                        program=false;
+                        //ADM_logged_Menu();
                     default:
                         System.out.println("Invalid option");
                 }
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
-
-
         }
     }
 }
