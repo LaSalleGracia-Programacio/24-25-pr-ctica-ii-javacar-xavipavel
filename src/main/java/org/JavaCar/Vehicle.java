@@ -19,7 +19,7 @@ public abstract class Vehicle implements Llogable {
         this.Motor = Motor;
         this.Rodes = Rodes;
         this.anyo = anyo;
-        calcularEtiquetaAmbiental(); // Calcular etiqueta automáticamente al crear el vehículo
+        calcularEtiquetaAmbiental();
     }
 
     public String getMatricula() {
@@ -58,9 +58,6 @@ public abstract class Vehicle implements Llogable {
         return this.PreuBase * dies;
     }
 
-    /**
-     * Método que calcula la etiqueta ambiental basándose en el tipo de motor y el año.
-     */
     protected void calcularEtiquetaAmbiental() {
         String tipusMotor = Motor.getTipus().toLowerCase();
 
@@ -89,9 +86,6 @@ public abstract class Vehicle implements Llogable {
         }
     }
 
-    /**
-     * Muestra los datos del vehículo.
-     */
     public String printVehicle() {
         String form = "Matricula: " + getMatricula() + "\n" +
                 "Marca: " + getMarca() + "\n" +
