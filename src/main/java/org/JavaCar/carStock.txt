@@ -5,8 +5,6 @@ Model: Daily
 PreuBase: 55
 Tipus(Motor): GASOLINA
 Potencia(Motor): 120
-Año: 0
-Etiqueta Ambiental: null
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
@@ -20,8 +18,6 @@ Model: Vito
 PreuBase: 50
 Tipus(Motor): GASOLINA
 Potencia(Motor): 120
-Año: 0
-Etiqueta Ambiental: null
 Roda(marca): Michelin
 Roda(Diametre): 17.0
 Roda(marca): Michelin
@@ -29,150 +25,78 @@ Roda(Diametre): 17.0
 Capacitat MAX:0
 
 Vehicle: Cotxe
-Matricula: 9988PAM
-Marca: Ford
-Model: Kuga
-PreuBase: 15000
-Tipus(Motor): Gasolina
-Potencia(Motor): 999
-Año: 0
-Etiqueta Ambiental: null
+Matricula: 1234ABC
+Marca: Toyota
+Model: Corolla
+PreuBase: 30
+Tipus(Motor): GASOLINA
+Potencia(Motor): 120
 Roda(marca): Michelin
-Roda(Diametre): 2.0
+Roda(Diametre): 17.0
 Roda(marca): Michelin
-Roda(Diametre): 2.0
+Roda(Diametre): 17.0
 Roda(marca): Michelin
-Roda(Diametre): 2.0
+Roda(Diametre): 17.0
 Roda(marca): Michelin
-Roda(Diametre): 2.0
+Roda(Diametre): 17.0
 Nº Plaçes:0
 
-Vehicle: Cotxe
-Matricula: 2233JKL
-Marca: Volkswagen
-Model: Golf
-PreuBase: 20000
+Vehicle: Moto
+Matricula: 5678DEF
+Marca: Yamaha
+Model: R6
+PreuBase: 25
 Tipus(Motor): GASOLINA
-Potencia(Motor): 150
-Año: 0
-Etiqueta Ambiental: null
-Roda(marca): Michelin
-Roda(Diametre): 1.9
-Roda(marca): Michelin
-Roda(Diametre): 1.9
-Roda(marca): Michelin
-Roda(Diametre): 1.9
-Roda(marca): Michelin
-Roda(Diametre): 1.9
-Nº Plaçes:5
-
-Vehicle: Cotxe
-Matricula: 4455MNO
-Marca: Nissan
-Model: Leaf
-PreuBase: 28000
-Tipus(Motor): ELECTRIC
-Potencia(Motor): 150
-Año: 0
-Etiqueta Ambiental: null
-Roda(marca): Bridgestone
-Roda(Diametre): 2.0
-Roda(marca): Bridgestone
-Roda(Diametre): 2.0
-Roda(marca): Bridgestone
-Roda(Diametre): 2.0
-Roda(marca): Bridgestone
-Roda(Diametre): 2.0
-Nº Plaçes:5
-
-Vehicle: Cotxe
-Matricula: 6677PQR
-Marca: Toyota
-Model: Prius
-PreuBase: 30000
-Tipus(Motor): HIBRID_GASOLINA
-Potencia(Motor): 122
-Año: 0
-Etiqueta Ambiental: null
-Roda(marca): Continental
-Roda(Diametre): 2.1
-Roda(marca): Continental
-Roda(Diametre): 2.1
-Roda(marca): Continental
-Roda(Diametre): 2.1
-Roda(marca): Continental
-Roda(Diametre): 2.1
-Nº Plaçes:5
-
-Vehicle: Cotxe
-Matricula: 8899STU
-Marca: Ford
-Model: Mondeo
-PreuBase: 25000
-Tipus(Motor): HIBRID_DIESEL
-Potencia(Motor): 180
-Año: 0
-Etiqueta Ambiental: null
+Potencia(Motor): 80
 Roda(marca): Pirelli
-Roda(Diametre): 2.2
+Roda(Diametre): 16.0
 Roda(marca): Pirelli
-Roda(Diametre): 2.2
-Roda(marca): Pirelli
-Roda(Diametre): 2.2
-Roda(marca): Pirelli
-Roda(Diametre): 2.2
-Nº Plaçes:5
+Roda(Diametre): 16.0
+Cilindrada:0
 
 Vehicle: Furgoneta
-Matricula: 7676AMC
-Marca: Mercedes
-Model: Vito
-PreuBase: 10000
+Matricula: 3344MNA
+Marca: Mircedes
+Model: Fake
+PreuBase: 1500
 Tipus(Motor): Gasolina
-Potencia(Motor): 90
-Año: 2020
-Etiqueta Ambiental: null
-Roda(marca): Pirelli
-Roda(Diametre): 2.0
-Roda(marca): Pirelli
-Roda(Diametre): 2.0
-Roda(marca): Pirelli
-Roda(Diametre): 2.0
-Roda(marca): Pirelli
-Roda(Diametre): 2.0
-Capacitat MAX:300
-
-Vehicle: Moto
-Matricula: 3355NAM
-Marca: Yamaha
-Model: Z700
-PreuBase: 2000
-Tipus(Motor): Gasolina
-Potencia(Motor): 90
-Año: 2023
-Etiqueta Ambiental: null
+Potencia(Motor): 500
 Roda(marca): Michelin
-Roda(Diametre): 2.0
+Roda(Diametre): 17.0
+Roda(marca): Michelin 17
+Roda(Diametre): 17.0
 Roda(marca): Michelin
-Roda(Diametre): 2.0
-Cilindrada:999
+Roda(Diametre): 17.0
+Roda(marca): Michelin
+Roda(Diametre): 17.0
+Capacitat MAX:0
 
 Vehicle: Cotxe
-Matricula: 2323LAC
-Marca: Ford
-Model: Kuga
-PreuBase: 14000
-Tipus(Motor): Diesel
-Potencia(Motor): 150
-Año: 2015
-Etiqueta Ambiental: null
-Roda(marca): Michelin
-Roda(Diametre): 2.0
-Roda(marca): Michelin
-Roda(Diametre): 2.0
-Roda(marca): Michelin
-Roda(Diametre): 2.0
-Roda(marca): Michelin
-Roda(Diametre): 2.0
-Nº Plaçes:5
+Matricula: si
+Marca: si
+Model: si
+PreuBase: 500
+Tipus(Motor): Gasolina
+Potencia(Motor): 500
+Roda(marca): si
+Roda(Diametre): 4.0
+Roda(marca): si
+Roda(Diametre): 4.0
+Roda(marca): si
+Roda(Diametre): 4.0
+Roda(marca): si
+Roda(Diametre): 4.0
+Nº Plaçes:0
 
+Vehicle: Moto
+Matricula: no
+Marca: no
+Model: no
+PreuBase: 500
+Tipus(Motor): Diesel
+Potencia(Motor): 500
+Roda(marca): no
+Roda(Diametre): 4.0
+Roda(marca): no
+Roda(Diametre): 4.0
+Cilindrada:500

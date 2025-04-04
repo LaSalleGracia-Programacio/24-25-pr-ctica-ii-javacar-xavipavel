@@ -119,7 +119,11 @@ public class Main {
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
+
+
         }
+
+
     }
 
     public static void ADM_logged_Menu(){
@@ -146,6 +150,8 @@ public class Main {
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
+
+
         }
     }
 
@@ -181,6 +187,7 @@ public class Main {
             }catch (InputMismatchException e){
                 System.out.println("wrong data entered");
             }
+
 
         }
     }

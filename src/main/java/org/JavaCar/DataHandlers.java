@@ -99,8 +99,8 @@ public class DataHandlers {
             String rodaMarca = "";
             double rodaDiametre = 0;
             int capacitatCarga = 0, nombrePlaces = 0, cilindrada = 0;
-            int anyo = 0;  // Año agregado
             List<Roda> rodes = new ArrayList<>();
+            int anyo = 0;
 
             while ((line = br.readLine()) != null) {
                 String[] parts = line.split(": ");
@@ -127,11 +127,9 @@ public class DataHandlers {
                     // Reiniciar variables para el siguiente vehículo
                     matricula = ""; marca = ""; model = ""; preuBase = 0;
                     tipusMotor = ""; potenciaMotor = 0; rodes.clear();
-                    capacitatCarga = 0; nombrePlaces = 0; cilindrada = 0;
-                    anyo = 0;  // Reiniciar el año también
+                    capacitatCarga = 0; nombrePlaces = 0; cilindrada = 0; anyo = 0;
                 }
 
-                // Asignación de campos
                 switch (parts[0].trim()) {
                     case "Vehicle":
                         type = parts[1].trim();
@@ -170,7 +168,7 @@ public class DataHandlers {
                     case "Cilindrada":
                         cilindrada = Integer.parseInt(parts[1].trim());
                         break;
-                    case "Año":  // Nuevo caso para el año
+                    case "Año": // Nuevo caso para el año
                         anyo = Integer.parseInt(parts[1].trim());
                         break;
                 }
@@ -181,7 +179,6 @@ public class DataHandlers {
 
         return vehicles;
     }
-
 
     /**
      * Registra un nuevo usuario solicitando el nombre de usuario y contraseña por consola.
@@ -283,38 +280,30 @@ public class DataHandlers {
         System.out.print("Introduce la matrícula: ");
         String matr = input.nextLine();
         input.reset();
-
         System.out.print("Introduce la marca: ");
         String marca = input.nextLine();
         input.reset();
-
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
         input.reset();
-
-        System.out.print("Introduce el año: ");
-        int anyo = input.nextInt();
-        input.nextLine(); // Consumir nueva línea
-        input.reset();
-
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
         input.reset();
-
         System.out.print("Introduce la capacidad de carga: ");
         int carga = input.nextInt();
         input.nextLine(); // Consumir nueva línea
         input.reset();
-
         System.out.print("Introduce el tipo de motor: ");
         String tipusMotor = input.nextLine();
         input.reset();
-
         System.out.print("Introduce la potencia del motor: ");
         int potenciaMotor = input.nextInt();
         input.nextLine(); // Consumir nueva línea
-
         Motor motor = new Motor(tipusMotor, potenciaMotor);
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt(); // Solicitar año
+        input.nextLine();
 
         Roda[] rodes = new Roda[4];
         for (int i = 0; i < 4; i++) {
@@ -349,11 +338,6 @@ public class DataHandlers {
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
 
-        System.out.print("Introduce el año: ");
-        int anyo = input.nextInt();
-        input.nextLine(); // Consumir nueva línea
-        input.reset();
-
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
 
@@ -369,6 +353,10 @@ public class DataHandlers {
         input.nextLine(); // Consumir nueva línea
 
         Motor motor = new Motor(tipusMotor, potenciaMotor);
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt(); // Solicitar año
+        input.nextLine();
 
         Roda[] rodes = new Roda[4];
         for (int i = 0; i < 4; i++) {
@@ -404,11 +392,6 @@ public class DataHandlers {
         System.out.print("Introduce el modelo: ");
         String model = input.nextLine();
 
-        System.out.print("Introduce el año: ");
-        int anyo = input.nextInt();
-        input.nextLine(); // Consumir nueva línea
-        input.reset();
-
         System.out.print("Introduce el precio base: ");
         double preu = input.nextDouble();
 
@@ -424,6 +407,10 @@ public class DataHandlers {
         input.nextLine(); // Consumir nueva línea
 
         Motor motor = new Motor(tipusMotor, potenciaMotor);
+
+        System.out.print("Introduce el año: ");
+        int anyo = input.nextInt(); // Solicitar año
+        input.nextLine();
 
         Roda[] rodes = new Roda[2];
         for (int i = 0; i < 2; i++) {
@@ -466,57 +453,52 @@ public class DataHandlers {
         return null;
     }
 
-    public void compra(int option, Vehicle vehicle) {
+    public void compra(int option,Vehicle vehicle){
         Furgoneta auxFurgo = null;
         Moto auxMoto = null;
         Cotxe auxCotxe = null;
-        int dies = 0;
-
-        if (vehicle instanceof Furgoneta) {
+        int dies=0;
+        if (vehicle instanceof Furgoneta){
             auxFurgo = (Furgoneta) vehicle;
-        } else if (vehicle instanceof Moto) {
-            auxMoto = (Moto) vehicle;
-        } else if (vehicle instanceof Cotxe) {
-            auxCotxe = (Cotxe) vehicle;
+        }else if(vehicle instanceof Moto){
+            auxMoto = (Moto)vehicle;
+        }else if(vehicle instanceof Cotxe){
+            auxCotxe = (Cotxe)vehicle;
         }
 
-        if (option == 1) { // comprar
+        if (option == 1){ //comprar
             System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
             vehicle.printVehicle();
-            if (auxFurgo == null) {
-                System.out.println("Capacitat MAX: " + auxFurgo.getCapacitatCarga());
-            } else if (auxMoto != null) {
-                System.out.println("Cilindrada: " + auxMoto.getCilindrada());
-            } else if (auxCotxe != null) {
-                System.out.println("Nº Plaçes: " + auxCotxe.getNombrePlaces());
+            if (auxFurgo == null){
+                System.out.println("Capacitat MAX: "+auxFurgo.getCapacitatCarga());
+            }else if (auxMoto != null){
+                System.out.println("Cilindrada: "+auxMoto.getCilindrada());
+            }else if (auxCotxe != null){
+                System.out.println("Nº Plaçes: "+auxCotxe.getNombrePlaces());
             }
-            System.out.println("\n\n\n QUANTITAT A PAGAR: " + vehicle.getPreuBase());
-
-            // Cambiar la disponibilidad a false cuando se compra el vehículo
-            vehicle.setDisponibilidad(false);
-            System.out.println("La disponibilidad del vehículo ahora es: " + vehicle.isDisponible());
-
-        } else { // llogar
-            try {
+            System.out.println("\n\n\n QUANTITAT A PAGAR:"+ vehicle.getPreuBase());
+        }else { // llogar
+            try{
                 System.out.println("Per cuants dies vols llogar el vehicle?");
                 dies = input.nextInt();
-            } catch (InputMismatchException e) {
+            }catch (InputMismatchException e){
                 System.out.println("No es un numero");
             }
-
             System.out.println("ESPECIFICACIONS DEL VEHICLE\n\n\n");
             vehicle.printVehicle();
-            if (auxFurgo != null) {
-                System.out.println("Capacitat MAX: " + auxFurgo.getCapacitatCarga());
-                System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxFurgo.calcularPreu(dies));
-            } else if (auxMoto != null) {
-                System.out.println("Cilindrada: " + auxMoto.getCilindrada());
-                System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxMoto.calcularPreu(dies));
-            } else {
-                System.out.println("Nº Plaçes: " + auxCotxe.getNombrePlaces());
-                System.out.println("\n\n\n QUANTITAT A PAGAR: " + auxCotxe.calcularPreu(dies));
+            if (auxFurgo != null){
+                System.out.println("Capacitat MAX: "+auxFurgo.getCapacitatCarga());
+                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxFurgo.calcularPreu(dies));
+            }else if (auxMoto != null){
+                System.out.println("Cilindrada: "+auxMoto.getCilindrada());
+                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxMoto.calcularPreu(dies));
+            }else{
+                System.out.println("Nº Plaçes: "+auxCotxe.getNombrePlaces());
+                System.out.println("\n\n\n QUANTITAT A PAGAR:"+ auxCotxe.calcularPreu(dies));
             }
+
+
+
         }
     }
-
 }

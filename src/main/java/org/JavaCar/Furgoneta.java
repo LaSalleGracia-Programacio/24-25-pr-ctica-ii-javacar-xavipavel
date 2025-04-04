@@ -2,22 +2,19 @@ package org.JavaCar;
 
 public class Furgoneta extends Vehicle implements Llogable {
     private int capacitatCarga;
-
-    public Furgoneta(String matricula, String marca, String model, double preu, int capacitatCarga, Motor motor, Roda[] rodes, int año) {
-        super(matricula, marca, model, preu, motor, rodes, año);
-        this.capacitatCarga = capacitatCarga;
+    public Furgoneta(String Matr, String Marca, String Model, double preu, int Carga, Motor Motor,Roda[] Rodes, int anyo){
+        super(Matr,Marca,Model,preu,Motor,Rodes,anyo);
+        this.capacitatCarga = Carga;
     }
-
-    public int getCapacitatCarga() {
+    public int getCapacitatCarga(){
         return capacitatCarga;
     }
-
     @Override
-    public double calcularPreu(int dies) {
-        if (capacitatCarga >= 1000) {
-            return (getPreuBase() + 10.0) * dies;
-        } else {
-            return getPreuBase() * dies;
+    public double calcularPreu(int dies){
+        if(capacitatCarga >= 1000){
+            return (getPreuBase()+10)*dies;
+        }else{
+            return getPreuBase()*dies;
         }
     }
 }

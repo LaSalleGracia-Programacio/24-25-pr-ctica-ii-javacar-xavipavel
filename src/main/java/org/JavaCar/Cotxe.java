@@ -1,19 +1,16 @@
 package org.JavaCar;
 
-public class Cotxe extends Vehicle implements Llogable {
+public class Cotxe extends Vehicle implements Llogable{
     private int nombrePlaces;
-
-    public Cotxe(String matricula, String marca, String model, double preu, int nombrePlaces, Motor motor, Roda[] rodes, int año) {
-        super(matricula, marca, model, preu, motor, rodes, año);
-        this.nombrePlaces = nombrePlaces;
+    public Cotxe(String Matr, String Marca, String Model, double preu, int places, Motor Motor,Roda[] Rodes, int anyo){
+        super(Matr,Marca,Model,preu,Motor,Rodes,anyo);
+        this.nombrePlaces = places;
     }
-
-    public int getNombrePlaces() {
+    public int getNombrePlaces(){
         return nombrePlaces;
     }
-
     @Override
-    public double calcularPreu(int dies) {
-        return getPreuBase() * dies;
+    public double calcularPreu(int dies){
+        return getPreuBase()*dies;
     }
 }
