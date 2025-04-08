@@ -168,7 +168,7 @@ public class DataHandlers {
                     case "Cilindrada":
                         cilindrada = Integer.parseInt(parts[1].trim());
                         break;
-                    case "Año": // Nuevo caso para el año
+                    case "Any":
                         anyo = Integer.parseInt(parts[1].trim());
                         break;
                 }
